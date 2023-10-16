@@ -1,0 +1,23 @@
+header
+{
+    background-color: #28109b;
+    margin: -16px -16px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+    padding: 0;
+
+}
+img
+{
+    height: 80px;
+    width: 170px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+input
+{   position: absolute;
+    top: 16px;
+    left: 200px;
+    border-radius: 8px;
+    padding: 10px;
+}
