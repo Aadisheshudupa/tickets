@@ -6,6 +6,7 @@ function Header()
 {
     return <header>
     <img src={logo} alt="" / >
+    hiiiiiiiihow r uuu
     <input type="search" name="" id=""/>
     </header>;
 }
