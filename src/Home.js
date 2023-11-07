@@ -26,7 +26,7 @@ function Home()
         </div>
         <br/>
         <br/>
-        <h2>you cant afford</h2>
+        <h2>Movies</h2>
         <br/>
         <Api/>
         
