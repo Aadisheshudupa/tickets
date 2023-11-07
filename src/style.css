@@ -6,18 +6,146 @@ header
     padding: 0;
 
 }
-img
+.logo
 {
-    height: 80px;
-    width: 170px;
+    height: 90px;
+    width: 200px;
     padding: 0px;
     margin: 0px;
     border: 0px;
 }
-input
+.search
 {   position: absolute;
-    top: 16px;
-    left: 200px;
-    border-radius: 8px;
-    padding: 10px;
+    top: 3%;
+    left: 76%;
+    border-radius: 11px;
+    border-color: #28109b;
+    padding: 14px;
+    border: 0px;
+}
+.div2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 70%;
+    
+}
+.center
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -50px;
+  
+}
+.center >li{
+  list-style-type: none;
+ padding: 10%; ;
+ 
+}
+.center > li >a
+{
+    color: aliceblue;
+    font-size: x-large;
+}
+.center
+{
+    padding: 0px;
+    margin: 0px;
+}
+.options1
+{
+    text-decoration: none;
+    color:#DAFFFB;
+    font-family: 'Roboto',sans-serif;
+    font-family: 'Tilt Neon', sans-serif;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+}
+.options2
+{
+    text-decoration: none;
+    color: #DAFFFB;
+    font-family: 'Roboto',sans-serif;
+    font-family: 'Tilt Neon', sans-serif;
+    position: absolute;
+    top: 6px;
+    left: 58%;
+}
+.options3
+{
+    text-decoration: none;
+    color: #DAFFFB;
+    font-family: 'Roboto',sans-serif;
+    font-family: 'Tilt Neon', sans-serif;
+    position: absolute;
+    top: 6px;
+    left: 65%;
+}
+a:hover
+{
+    color: rgb(45, 223, 155);
+}
+.search
+{   position: absolute;
+    top: 3%;
+    left: 76%;
+    border-radius: 11px;
+    border-color: #28109b;
+    padding: 14px;
+    border: 0px;
+}
+.seats{
+    border: solid red;
+    border-width: 10px 10px 0px 10px;
+    margin: 4px;
+    display: inline-block;
+    width: 1em;
+    padding: 0px;
+    position: relative;
+    top: 60%;
+    font-size: small;
+    text-align: center;
+    left:15%
+  }
+.seats:hover
+{
+    color: darkgray;
+    border-color: bisque;
+}
+.screen
+{
+    position: absolute;
+    left: 25%;
+}
+.posters
+{
+    width: 220px;
+    height: 340px;
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.select
+{
+    display: flex;
+    overflow-x: auto;
+    font-family: 'Roboto',sans-serif;
+}
+.select::-webkit-scrollbar {
+    display: none;
+}
+.movieselection
+{
+    float: left;
+    margin: 12px;
+
+}
+.posters:hover
+{
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0);
+
 }
