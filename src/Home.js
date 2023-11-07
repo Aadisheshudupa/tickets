@@ -26,7 +26,7 @@ function Home()
         </div>
         <br/>
         <br/>
-        <h2>trending Movies </h2>
+        <h2 className="">trending Movies </h2>
         <br/>
         <Api/>
         
