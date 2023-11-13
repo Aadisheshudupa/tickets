@@ -1,5 +1,9 @@
 import {useEffect,useState} from 'react';
 import "./style.css"
+import { BrowserRouter,NavLink,Routes,Route } from "react-router-dom";
+import seatBooking from "./seatBooking";
+import Movies from './Movie';
+
 const fetch = require('node-fetch');
 function Api(){
     const [kn_data,state1]=useState([]);
@@ -8,10 +12,7 @@ function Api(){
     const [hi_data,state4]=useState([]);
     const [en_data,state5]=useState([]);
 
-
 const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_date.gte=2023-10-01&primary_release_date.lte=2023-11-24&sort_by=popularity.desc&watch_region=India&with_original_language=ta%7Cte%7Chi';
-
-
 const url2 = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_date.gte=2023-10-01&primary_release_date.lte=2023-11-24&sort_by=popularity.desc&watch_region=India&with_original_language=kn';
 const url1 = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_date.gte=2023-10-01&primary_release_date.lte=2023-11-24&sort_by=popularity.desc&watch_region=India&with_original_language=en';
 useEffect(()=>{
@@ -39,7 +40,7 @@ const hi_array=[];
     kn_array[1]=movies[1];
     state1(kn_array);
   })
-  .catch(err => console.error('error:' + err));
+  .catch(err => {console.error('error:' + err)});
   fetch(url, options)
     .then(res => res.json())
     .then(json => {
@@ -73,7 +74,8 @@ const hi_array=[];
       state3(ta_array);
       state4(hi_array);
     })
-    .catch(err => console.error('error:' + err));
+    .catch(err => {console.error('error:' + err)
+  });
   
     fetch(url1, options)
     .then(res => res.json())
@@ -83,54 +85,63 @@ const hi_array=[];
       en_array[1]=movies[1];
       state5(en_array);
     })
-    .catch(err => console.error('error:' + err));
+    .catch(err => {console.error('error:' + err)
+  });
 },[])
-
-  
-    return(
-        <div className='select'>
+    console.log(ta_data[0]?.title);
+    var all = [].concat.apply([],[ta_data,te_data,kn_data,hi_data,en_data]);
+    return{
+      Apii:<div className='select'>
+          <Routes>
+          <Route path="/Leo" element={<Movies/>}/>
+          </Routes>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${kn_data[0]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${kn_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${kn_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{kn_data[0]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${ta_data[0]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${ta_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${ta_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{ta_data[0]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${te_data[0]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${te_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${te_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{te_data[0]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${en_data[0]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${en_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${en_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{en_data[0]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${hi_data[0]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${hi_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${hi_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{hi_data[0]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${kn_data[1]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${kn_data[1]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${kn_data[1]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{kn_data[1]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${en_data[1]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${en_data[1]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${en_data[1]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{en_data[1]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${ta_data[1]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${ta_data[1]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${ta_data[1]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{ta_data[1]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${hi_data[1]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${hi_data[1]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${hi_data[1]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{hi_data[1]?.title}</h3>
           </div>
           <div className='movieselection'>
-            <img src={`https://image.tmdb.org/t/p/w500${te_data[1]?.poster_path}`} alt="" className="posters" ></img>
+          <NavLink to={`/${te_data[1]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${te_data[1]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{te_data[1]?.title}</h3>
           </div>
-        </div>
-    );
-}
+        </div>,
+        Data:all,
 
+    
+    
+};
+
+
+}
 export default Api;

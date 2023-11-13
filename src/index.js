@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
-import { BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter,Router } from 'react-router-dom';
+import api from './api'
 ReactDOM.render(
   <BrowserRouter>
     <App/>
-  </BrowserRouter>
+    </BrowserRouter>
 
 ,document.getElementById("root"));
 
