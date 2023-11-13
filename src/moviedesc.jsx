@@ -95,9 +95,7 @@ function Desc(movie)
             <br />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
+            <button className="book"><b>BOOK NOW</b></button>
         </div>
     );
 }
