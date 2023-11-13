@@ -91,7 +91,10 @@ function Desc(movie)
             {genre_array.map(id=>
             <h4 className="genre">{id}</h4>)}
             Release date:
-            <h4>{movie?.release_date}</h4>
+            <h4 className="date">{movie?.release_date}</h4>
+            <br />
+            <br />
+            <br />
             <br />
             <br />
             <br />
