@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css"
+import { BrowserRouter,NavLink,Routes,Route } from "react-router-dom";
+
 function Desc(movie)
 {const genre_array=[];
     var n=0;
@@ -81,21 +83,29 @@ function Desc(movie)
             break;
     }
 })
+
     return(
         <div className="desc">
             <br />
 <img src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`} alt="" className="picdesc" ></img>
 
             <h3 >{movie?.title}</h3>
+            <hr />
             <h4>{movie?.overview}</h4>
+            <hr />
             {genre_array.map(id=>
             <h4 className="genre">{id}</h4>)}
+            <hr />
             Release date:
-            <h4 className="date">{movie?.release_date}</h4>
+            <h4 className="releasedate">{movie?.release_date}</h4>
+            <hr />
+            cost:200
             <br />
             <br />
             <br />
-            <button className="book"><b>BOOK NOW</b></button>
+            <br/>
+            <NavLink to={`/${movie?.title}/book`}><button className="book"><b>BOOK NOW</b></button></NavLink>
+
         </div>
     );
 }

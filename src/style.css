@@ -100,27 +100,35 @@ a:hover
     border: 0px;
 }
 .seats{
-    border: solid red;
-    border-width: 10px 10px 0px 10px;
+
+   
     margin: 4px;
     display: inline-block;
-    width: 1em;
+    border-radius: 5px;
+    width: 2em;
     padding: 0px;
     position: relative;
     top: 60%;
     font-size: small;
     text-align: center;
-    left:15%
+    left:22%;
+    height:1.8em;
   }
 .seats:hover
 {
     color: darkgray;
     border-color: bisque;
 }
+.seats:active
+{
+    color: greenyellow;
+}
 .screen
 {
     position: absolute;
     left: 25%;
+    width: 610px;
+    height: 20px;
 }
 .posters
 {
@@ -159,15 +167,13 @@ h2
     margin-top: 10px;
     margin-right: 20px;
     margin-left: 10px;
-    width: 240px;
-    height: 300px;
+    width: 260px;
+    height: 370px;
     box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 .desc
 {
-    background-color:#28109b;
-    color: whitesmoke ;
     font-family: 'Roboto',sans-serif;
     margin: 0px;
     float: left;
@@ -193,3 +199,53 @@ margin: 0px;}
     background-color: yellow;
     ;
 }
+.seatss
+{
+    float: left;
+    position: absolute;
+    left: 6%;
+}
+.table
+{
+    border-width: 20px;
+    border-color: #28109b;
+    font-family: 'Roboto',sans-serif;
+}
+.date
+{
+ background-color: #755fe2;
+ border-radius: 8px;
+ border-width: 0px;
+}
+.confirm
+{
+    font-family: 'Roboto',sans-serif;
+}
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-heading {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .about-text {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  .about-credits {
+    color: #333;
+    font-size: 1.2em;
+    text-align: right;
+  }
+
+
+  
