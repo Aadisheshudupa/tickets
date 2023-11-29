@@ -27,12 +27,6 @@ function About() {
         ultimate destination for all things cinema. Welcome to a world where
         every click opens the door to an unforgettable movie night!
       </p>
-      <p className="about-credits">
-        This website is designed by:<br></br>
-        Aadishesh Udupa K(PES1UG22CS002)<br></br>
-        Adhesh Rajath(PES1UG22CS026)<br></br>
-        Abhishek A Patil(PES1UG22CS019)
-      </p>
     </div>
     </div>
   );

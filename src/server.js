@@ -1,11 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
 const app = express();
-const port = process.env.PORT || 3002;
 app.use(cors());
-mongoose.connect("mongodb+srv://aadiudu:scared2compile@scared2compile.wxkvott.mongodb.net/?retryWrites=true&w=majority", {
+const result = require('dotenv').config({path:'../.env'});
+
+if (result.error) {
+  console.error(result.error);
+}
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -49,6 +52,3 @@ app.post('/api/data', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
