@@ -3,7 +3,6 @@ import "./style.css"
 import { BrowserRouter,NavLink,Routes,Route } from "react-router-dom";
 import seatBooking from "./seatBooking";
 import Movies from './Movie';
-const result = require('dotenv').config({path:'../.env'});
 
 const fetch = require('node-fetch');
 function Api(){
@@ -21,7 +20,7 @@ useEffect(()=>{
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: process.env.APIKEY,
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YzY5NDY1M2YxMzZmZDYxMmIxNThiMDk1YTY2NzhiNCIsInN1YiI6IjY1M2I5NWZhNTkwN2RlMDEzOGUwYmU5OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MwaTcNsdK_qDhxuLIZLos7KvVhwga1wyHdmaUzJ_no0'
     }
   };
   var te=0;
