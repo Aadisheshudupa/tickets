@@ -100,10 +100,6 @@ const hi_array=[];
             <h3>{kn_data[0]?.title}</h3>
           </div>
           <div className='movieselection'>
-          <NavLink to={`/${ta_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${ta_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
-            <h3>{ta_data[0]?.title}</h3>
-          </div>
-          <div className='movieselection'>
           <NavLink to={`/${te_data[0]?.title}`}><img src={`https://image.tmdb.org/t/p/w500${te_data[0]?.poster_path}`} alt="" className="posters" ></img></NavLink>
             <h3>{te_data[0]?.title}</h3>
           </div>
